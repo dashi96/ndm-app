@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {MatSort} from "@angular/material/sort";
 import {MatTableDataSource} from "@angular/material/table";
 import {AppService, Route} from "./app.service";
@@ -10,7 +10,7 @@ import {DestroyService} from "./destroy.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   displayedColumns: string[] = ['address', 'gateway', 'interface'];
   dataSource: MatTableDataSource<Route>;
   @ViewChild(MatSort, { static: true }) private sort: MatSort;
@@ -20,10 +20,7 @@ export class AppComponent implements AfterViewInit {
       .pipe(takeUntil(destroy$))
       .subscribe(routes => {
         this.dataSource = new MatTableDataSource(routes || []);
+        this.dataSource.sort = this.sort;
       })
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
   }
 }
