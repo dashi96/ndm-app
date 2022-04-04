@@ -14,7 +14,7 @@ export interface Route {
 export class AppService {
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<Route[]> {
+  getRoutes(): Observable<Route[]> {
     return this.http.get<Route[]>('./assets/routes.json');
   }
 }
