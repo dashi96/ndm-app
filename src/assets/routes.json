@@ -1,0 +1,44 @@
+[
+  {
+    "uuid": "111",
+    "address": "0.0.0.0/0",
+    "mask": "mask1",
+    "gateway": "193.0.174.1",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "222",
+    "address": "10.1.30.0/24",
+    "mask": "mask2",
+    "gateway": "0.0.0.0",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "333",
+    "address": "192.168.1.0/24",
+    "mask": "mask3",
+    "gateway": "0.0.0.0",
+    "interface": "Домашняя сеть"
+  },
+  {
+    "uuid": "444",
+    "address": "193.0.174.0/24",
+    "mask": "mask4",
+    "gateway": "0.0.0.0",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "555",
+    "address": "193.0.175.0/25",
+    "mask": "mask5",
+    "gateway": "193.0.174.10",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "666",
+    "address": "193.0.175.22/32",
+    "mask": "mask6",
+    "gateway": "193.0.174.1",
+    "interface": "Подключение Ethernet"
+  }
+]
